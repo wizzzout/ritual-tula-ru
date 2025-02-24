@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 export default function ProductsPage() {
 	const [products, setProducts] = useState<Product[]>([])
 	const [loading, setLoading] = useState(true)
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const [error, setError] = useState<string | null>(null)
 
 	useEffect(() => {
