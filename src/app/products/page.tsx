@@ -1,6 +1,7 @@
 'use client'
 
 import { fetchProducts, Product } from '@/lib/api'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export default function ProductsPage() {
@@ -40,7 +41,7 @@ export default function ProductsPage() {
 						<h2 className='text-xl font-semibold'>{product.title.rendered}</h2>
 						<p className='text-gray-600'>Цена: {product.acf.price} руб.</p>
 						{product.acf.image && (
-							<img
+							<Image
 								src={product.acf.image}
 								alt={product.title.rendered}
 								className='mt-4 rounded-lg'
