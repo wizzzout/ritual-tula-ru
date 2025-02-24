@@ -17,6 +17,9 @@ const Navbar = () => {
 					<Link href='/about' className='text-black hover:text-gray-200'>
 						О нас
 					</Link>
+					<Link href='/mari' className='text-black hover:text-gray-200'>
+						Mari
+					</Link>
 				</div>
 			</div>
 		</nav>
