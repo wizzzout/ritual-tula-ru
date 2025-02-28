@@ -6,15 +6,18 @@ export interface Product {
 		rendered: string
 	}
 	acf: {
+		name: string
 		price: number
-		image: string
+		desc: string
+		sku: string
+		images: number
 	}
 }
 
 export async function fetchProducts(): Promise<Product[]> {
 	try {
 		const response = await axios.get(
-			`${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/product`
+			`${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/product/`
 		)
 		return response.data
 	} catch (error) {
